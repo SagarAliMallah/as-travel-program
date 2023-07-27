@@ -1,0 +1,31 @@
+# Initialize a list to store the destinations
+destinations = []
+
+# Function to add a destination to the list
+def add_destination(destination):
+    destinations.append(destination)
+
+# Function to display the list of destinations
+def display_destinations():
+    if len(destinations) == 0:
+        print("No destinations added yet.")
+    else:
+        print("Destinations:")
+        for destination in destinations:
+            print("- " + destination)
+
+# Function to remove a destination from the list
+def remove_destination(destination):
+    if destination in destinations:
+        destinations.remove(destination)
+        print(f"Removed {destination} from the destinations list.")
+    else:
+        print(f"{destination} not found in the destinations list.")
+
+# Sample usage of the functions
+add_destination("Paris")
+add_destination("Tokyo")
+add_destination("New York")
+display_destinations()
+remove_destination("Tokyo")
+display_destinations()
